@@ -16,7 +16,7 @@
         </event-block>
         <event-block sid="555988568013231">
             <conditions>
-                <condition id="0" name="On collision with another object" sid="245145539822832" type="Sprite">
+                <condition id="0" name="On collision with another object" sid="245145539822832" type="andando">
                     <param id="0" name="Object">Sprite2</param>
                 </condition>
             </conditions>
@@ -26,13 +26,27 @@
                 </action>
             </actions>
         </event-block>
-        <event-block sid="431524771261563">
+        <event-block sid="899532294114999">
             <conditions>
-                <condition id="2" name="Key is down" sid="838155366288330" type="Keyboard">
-                    <param id="0" name="Key">32</param>
-                </condition>
+                <condition behavior="Platform" id="7" name="On stopped" sid="460263823732687" type="andando" />
             </conditions>
-            <actions />
+            <actions>
+                <action id="4" name="Set animation" sid="608378356946536" type="andando">
+                    <param id="0" name="Animation">&quot;parado&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
+        </event-block>
+        <event-block sid="807262170843382">
+            <conditions>
+                <condition behavior="Platform" id="8" name="On moved" sid="780381911974587" type="andando" />
+            </conditions>
+            <actions>
+                <action id="4" name="Set animation" sid="890413232778186" type="andando">
+                    <param id="0" name="Animation">&quot;Default&quot;</param>
+                    <param id="1" name="From">0</param>
+                </action>
+            </actions>
         </event-block>
     </events>
 </c2eventsheet>

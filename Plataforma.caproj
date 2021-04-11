@@ -13,10 +13,10 @@
         <plugin author="Scirra" id="Keyboard" version="1">Keyboard</plugin>
         <plugin author="Scirra" id="Sprite" version="1">Sprite</plugin>
         <plugin author="Scirra" id="TiledBg" version="1">Tiled Background</plugin>
-        <plugin author="Scirra" id="Tilemap" version="1">Tilemap</plugin>
     </used-plugins>
     <used-behaviors>
         <behavior author="Scirra" id="Bullet" version="1">Bullet</behavior>
+        <behavior author="Scirra" id="Persist" version="1">Persist</behavior>
         <behavior author="Scirra" id="Platform" version="1">Platform</behavior>
         <behavior author="Scirra" id="Sin" version="1">Sine</behavior>
         <behavior author="Scirra" id="scrollto" version="1">Scroll To</behavior>
@@ -27,8 +27,8 @@
         <configuration exporter-descname="HTML5" exporter-id="html5" name="HTML5" />
     </configurations>
     <window-size>
-        <width>800</width>
-        <height>600</height>
+        <width>1600</width>
+        <height>720</height>
     </window-size>
     <pixel-rounding>0</pixel-rounding>
     <preview-effects>1</preview-effects>
@@ -126,19 +126,127 @@
             </behaviors>
             <texture original-source="D:\sprites\tilemap1.png" />
         </object-type>
-        <object-type name="Tilemap" sid="300458207127432">
-            <plugin id="Tilemap" />
-            <texture original-source="D:\sprites\tilemap2.png" />
-            <tiles />
-        </object-type>
-        <object-type name="Tilemap2" sid="809710194590727">
-            <plugin id="Tilemap" />
-            <texture />
-            <tiles />
-        </object-type>
         <object-type name="TiledBackground3" sid="814828153836137">
             <plugin id="TiledBg" />
             <texture original-source="D:\sprites\tilemap2.png" />
+        </object-type>
+        <object-type name="TiledBackground4" sid="136201022325226">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Persist" sid="999865801200113">
+                    <behavior id="Persist" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\Nova pasta\ENVIRONMENTS\OUTERSPACE\background01.png" />
+        </object-type>
+        <object-type name="TiledBackground5" sid="619387585026407">
+            <plugin id="TiledBg" />
+            <behaviors>
+                <behavior-type name="Solid" sid="376272136900322">
+                    <behavior id="solid" />
+                </behavior-type>
+                <behavior-type name="Sine" sid="130690316447779">
+                    <behavior id="Sin" />
+                </behavior-type>
+            </behaviors>
+            <texture original-source="D:\sprites\tilemap3.png" />
+        </object-type>
+        <object-type name="Sprite4" sid="318790696674715">
+            <plugin id="Sprite" />
+            <animation-folder>
+                <animation framecount="1" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="360447951943536" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" />
+                </animation>
+            </animation-folder>
+        </object-type>
+        <object-type name="andando" sid="662000404850004">
+            <plugin id="Sprite" />
+            <behaviors>
+                <behavior-type name="ScrollTo" sid="145979487556721">
+                    <behavior id="scrollto" />
+                </behavior-type>
+                <behavior-type name="Platform" sid="759728992603890">
+                    <behavior id="Platform" />
+                </behavior-type>
+            </behaviors>
+            <animation-folder>
+                <animation framecount="1" loop="0" name="parado" pingpong="0" repeatcount="1" repeatto="0" sid="638715285403869" speed="5">
+                    <frame duration="1" hotspotX="0.5" hotspotY="0.5" original-source="D:\sprites\principal.png">
+                        <collision-poly>
+                            <point x="0.147887" y="0.191358" />
+                            <point x="0.5" y="0.00617284" />
+                            <point x="0.922535" y="0.12963" />
+                            <point x="0.992958" y="0.5" />
+                            <point x="0.922535" y="0.87037" />
+                            <point x="0.5" y="0.932099" />
+                            <point x="0.147887" y="0.808642" />
+                            <point x="0.00704225" y="0.5" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+                <animation framecount="7" loop="0" name="Default" pingpong="0" repeatcount="1" repeatto="0" sid="232123276964828" speed="5">
+                    <frame duration="1" hotspotX="0.472973" hotspotY="0.975" original-source="D:\sprites\WALK CYCLE1.png">
+                        <collision-poly>
+                            <point x="0.121212" y="0" />
+                            <point x="1" y="0" />
+                            <point x="1" y="0.191358" />
+                            <point x="1" y="0.561728" />
+                            <point x="1" y="0.932099" />
+                            <point x="1" y="1" />
+                            <point x="0.121212" y="1" />
+                            <point x="0" y="0.561728" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="1.15315" hotspotY="0.532895" original-source="D:\sprites\WALK CYCLE2.png">
+                        <collision-poly>
+                            <point x="0.22973" y="0.203947" />
+                            <point x="0.95045" y="0.532895" />
+                            <point x="0.22973" y="0.861842" />
+                            <point x="0.0045045" y="0.532895" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="1.15315" hotspotY="0.532895" original-source="D:\sprites\WALK CYCLE3.png">
+                        <collision-poly>
+                            <point x="0.22973" y="0.203947" />
+                            <point x="0.95045" y="0.532895" />
+                            <point x="0.22973" y="0.861842" />
+                            <point x="0.0045045" y="0.532895" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="1.15315" hotspotY="0.532895" original-source="D:\sprites\WALK CYCLE4.png">
+                        <collision-poly>
+                            <point x="0.22973" y="0.203947" />
+                            <point x="0.95045" y="0.532895" />
+                            <point x="0.22973" y="0.861842" />
+                            <point x="0.0045045" y="0.532895" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="1.15315" hotspotY="0.640845" original-source="D:\sprites\WALK CYCLE5.png">
+                        <collision-poly>
+                            <point x="0.184685" y="0.21831" />
+                            <point x="0.815315" y="0.640845" />
+                            <point x="0.22973" y="0.992958" />
+                            <point x="0.0045045" y="0.640845" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="1.15315" hotspotY="0.570423" original-source="D:\sprites\WALK CYCLE6.png">
+                        <collision-poly>
+                            <point x="0.22973" y="0.21831" />
+                            <point x="0.95045" y="0.570423" />
+                            <point x="0.22973" y="0.922535" />
+                            <point x="0.0045045" y="0.570423" />
+                        </collision-poly>
+                    </frame>
+                    <frame duration="1" hotspotX="1.15315" hotspotY="0.570423" original-source="D:\sprites\WALK CYCLE7.png">
+                        <collision-poly>
+                            <point x="0.22973" y="0.21831" />
+                            <point x="0.95045" y="0.570423" />
+                            <point x="0.22973" y="0.922535" />
+                            <point x="0.0045045" y="0.570423" />
+                        </collision-poly>
+                    </frame>
+                </animation>
+            </animation-folder>
         </object-type>
     </object-folder>
     <families />
